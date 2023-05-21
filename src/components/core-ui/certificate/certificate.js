@@ -36,7 +36,7 @@ const Certificate = () => {
 	};
 
 	return (
-		<Container sx={{ py: 5 }}>
+		<Container sx={{ py: 5 }} id="certificates">
 			<div className="certificate-header">
 				<h1
 					style={{

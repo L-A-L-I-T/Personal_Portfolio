@@ -7,5 +7,5 @@ export const headerData = {
 	image: Avatar,
 	imagebw: "https://i.ibb.co/Cw2Xp90/abu-said-bw.jpg",
 	resumePdf:
-		"https://drive.google.com/file/d/10HouT7rif-S4Cvn1kOjyfpN4PlMWI8zd/view?usp=sharing",
+		"https://drive.google.com/file/d/1ih9BcFrNfW9UHOaRxcr1t2HsEM8BoPcS/view?usp=sharing",
 };

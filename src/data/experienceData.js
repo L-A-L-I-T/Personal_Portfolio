@@ -2,7 +2,7 @@ export const experienceData = [
 	{
 		id: 1,
 		company: "Cimpress India",
-		jobtitle: "SDE Intern",
+		jobtitle: "Software Engineer",
 		startYear: "August 2023",
 		endYear: "April 2026",
 	},

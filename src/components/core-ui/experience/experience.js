@@ -1,10 +1,7 @@
 import { Container } from '@mui/material';
 import React, { useContext } from 'react';
-import experience from '../../../assets/lottie/development.json';
 import { ThemeContext } from '../../../contexts/theme-context';
 import { experienceData } from '../../../data/experienceData';
-import AnimationLottie from '../../helper/animation-lottie';
-import ExperienceCard from './experience-card';
 import './experience.css';
 
 function Experience() {
@@ -13,22 +10,20 @@ function Experience() {
     return (
         <div style={{ backgroundColor: theme.secondary }}>
             <Container className="experience" id="experience">
+                <div className="experience-header">
+                    <p style={{ color: theme.primary }}>Career</p>
+                    <h1 style={{ color: theme.tertiary }}>Professional Experience</h1>
+                </div>
                 <div className="experience-body">
-                    <div className="experience-image">
-                        <AnimationLottie animationPath={experience} />
-                    </div>
-                    <div className="experience-description">
-                        <h1 style={{ color: theme.primary }}>Experience</h1>
-                        {experienceData.map(exp => (
-                            <ExperienceCard
-                                key={exp.id}
-                                id={exp.id}
-                                jobtitle={exp.jobtitle}
-                                company={exp.company}
-                                startYear={exp.startYear}
-                                endYear={exp.endYear} />
-                        ))}
-                    </div>
+                    {experienceData.map((exp) => (
+                        <article key={exp.id} className="experience-card" style={{ backgroundColor: theme.quaternary }}>
+                            <div className="experience-period" style={{ color: theme.primary }}>
+                                {exp.startYear} - {exp.endYear}
+                            </div>
+                            <h3 style={{ color: theme.tertiary }}>{exp.jobtitle}</h3>
+                            <p style={{ color: theme.tertiary }}>{exp.company}</p>
+                        </article>
+                    ))}
                 </div>
             </Container>
         </div>

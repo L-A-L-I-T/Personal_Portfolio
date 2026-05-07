@@ -7,8 +7,6 @@ import { timeConverter } from '../../../../utils/timeConverter';
 import './blog-card.css';
 
 function BlogCard({ blog, theme }) {
-    console.log(blog)
-
     return (
         <Fade bottom>
             <a className="singleBlog"

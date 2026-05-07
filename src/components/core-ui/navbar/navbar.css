@@ -1,7 +1,10 @@
 .navbar {
-  height: 6.5rem;
-  position: absolute;
-  background-color: transparent;
+  height: 5.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(9, 11, 16, 0.94), rgba(9, 11, 16, 0));
+  backdrop-filter: blur(8px);
   z-index: 99;
   display: flex;
   align-items: center;
@@ -13,45 +16,61 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  padding: 0 3rem;
-  margin-top: 1rem;
+  width: min(1100px, 92%);
+  padding: 0 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .navbar--container > h1 {
-  font-family: "BestermindRegular";
-  color: var(--primary-2);
-  font-size: 2.5rem;
+  font-family: var(--primaryFont);
+  letter-spacing: 0.04em;
+  font-size: 1.5rem;
+  font-weight: 700;
   user-select: none;
 }
 
+.brand-link {
+  display: inline-flex;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
 .navLink--container {
-  margin-top: 5rem;
+  margin-top: 4.5rem;
 }
 
 .drawer > .MuiBackdrop-root {
-  background: rgba(33, 33, 33, 0.15) !important;
-  backdrop-filter: blur(20px) !important;
+  background: rgba(7, 10, 18, 0.45) !important;
+  backdrop-filter: blur(14px) !important;
 }
 
 .drawer > .MuiDrawer-paper {
-  background-color: #15202b !important;
+  background: #0c111b !important;
+  border-right: 1px solid rgba(149, 163, 190, 0.22);
 }
 
 @media (max-width: 1100px) {
   .navbar--container {
-    padding: 0 2rem;
+    width: 94%;
   }
   .navbar--container > h1 {
-    font-size: 2.2rem;
+    font-size: 1.35rem;
   }
   .nav-menu {
-    font-size: 2.2rem;
-    margin-top: -1.5rem;
+    font-size: 2rem;
+    margin-top: -0.75rem;
   }
 }
 
 @media (max-width: 800px) {
+  .navbar-links {
+    display: none;
+  }
+
   .navLink--container {
     margin-top: 3rem;
   }
@@ -59,13 +78,10 @@
 
 @media (max-width: 600px) {
   .nav-menu {
-    color: var(--primary-2);
+    margin-top: -0.4rem;
   }
   .navbar--container > h1 {
-    font-size: 2rem;
-  }
-  .nav-menu:hover {
-    color: var(--primary-2);
+    font-size: 1.2rem;
   }
   .MuiDrawer-paper {
     border-radius: 0 !important;
@@ -74,13 +90,13 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
   .navbar {
-    height: 5rem;
+    height: 4.5rem;
   }
   .navbar--container {
-    padding: 0 1rem;
+    width: 94%;
     margin-top: 0rem;
   }
   .navbar--container > h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }

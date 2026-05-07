@@ -1,7 +1,7 @@
 import { Drawer } from "@mui/material";
 import React from "react";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
-import { FaFolderOpen, FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { HiDocumentText } from "react-icons/hi";
 import { IoClose, IoHomeSharp, IoMenuSharp } from "react-icons/io5";
 import { MdPhone } from "react-icons/md";
@@ -23,8 +23,26 @@ function NavbarUI({
 	return (
 		<div className="navbar">
 			<div className="navbar--container">
-				<h1 style={{ color: theme.primary }}>{shortname(headerData.name)}</h1>
-
+				<NavLink to="/" className="brand-link">
+					<h1 style={{ color: theme.primary }}>{shortname(headerData.name)}</h1>
+				</NavLink>
+				<div className="navbar-links">
+					<NavLink to="/#about" smooth={true} spy="true" duration={900} className={classes.desktopLink}>
+						About
+					</NavLink>
+					<NavLink to="/#resume" smooth={true} spy="true" duration={900} className={classes.desktopLink}>
+						Journey
+					</NavLink>
+					<NavLink to="/#projects" smooth={true} spy="true" duration={900} className={classes.desktopLink}>
+						Projects
+					</NavLink>
+					<NavLink to="/#contacts" smooth={true} spy="true" duration={900} className={classes.desktopLink}>
+						Contact
+					</NavLink>
+					<button className={classes.desktopTheme} onClick={changeTheme} aria-label="Toggle theme">
+						{isDark ? <BsFillSunFill /> : <BsFillMoonFill />}
+					</button>
+				</div>
 				<IoMenuSharp
 					className={classes.navMenu}
 					onClick={handleDrawerOpen}

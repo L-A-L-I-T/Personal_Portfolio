@@ -1,37 +1,26 @@
 import Chatcord from "../assets/png/chatcord.avif";
 import Moviesverse from "../assets/png/moviesverse.avif";
-import Ecommerce from "../assets/png/ecommerce.avif";
 
 export const projectsData = [
 	{
 		id: 1,
 		projectName: "Chatcord",
 		projectDesc:
-			"This Project is a Web app for connecting and chat with friends.",
-		tags: ["React", "Material UI", "Node", "Express", "MongoDB"],
-		code: "https://github.com/L-A-L-I-T/Chatcord",
-		demo: "https://mern-chatcord.herokuapp.com/",
+			"Built a scalable real-time chat platform with Socket.io, Redis Pub/Sub, and Kafka-backed message persistence for reliable cross-server delivery, presence tracking, Google OAuth 2.0 auth, and low-latency MongoDB conversation loading.",
+		tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "Redis", "Apache Kafka"],
+		code: "https://github.com/L-A-L-I-T/ChatcordApp",
+		demo: "https://chatcord-app-8agv.vercel.app/",
 		image: Chatcord,
 	},
 	{
 		id: 2,
 		projectName: "Moviesverse",
 		projectDesc:
-			"This project is a Platform were user can get all the information about a particular movies, web series or actors.",
-		tags: ["React", "Material Ui", "TMDB API"],
-		code: "https://github.com/L-A-L-I-T/Moviesverse",
-		demo: "https://moviesverse.netlify.app/movies",
+			"Developed a responsive movie discovery app using Next.js with SSR/CSR and TMDB API integration to browse Movies, TV Shows, and Actors, with RTK Query caching to reduce redundant requests and improve navigation performance.",
+		tags: ["Next.js", "Bootstrap", "TMDB API", "Redux Toolkit", "RTK Query"],
+		code: "https://github.com/L-A-L-I-T/Moviesverse-NextJs-SSR/tree/main",
+		demo: "https://moviesverse-beryl.vercel.app/movies",
 		image: Moviesverse,
-	},
-	{
-		id: 3,
-		projectName: "Ecommerce App",
-		projectDesc:
-			"This project is about an Ecommerce app to buy and sell goods based on Blockchain.",
-		tags: ["Solidity", "Metamask", "Javascript", "HTML", "CSS"],
-		code: "https://github.com/L-A-L-I-T/BlockChainEcommerce",
-		demo: "",
-		image: Ecommerce,
 	},
 ];
 

@@ -9,20 +9,20 @@ const Projects = () => {
   const useStyles = makeStyles(() => ({
     viewAllBtn: {
       color: theme.secondary,
-      backgroundColor: theme.buttonColor,
+      backgroundColor: theme.primary,
       transition: 'color 0.5s',
       "&:hover": {
-        color: theme.secondary,
-        backgroundColor: theme.primary,
+        color: theme.tertiary,
+        backgroundColor: theme.buttonColor,
       }
     },
     viewArr: {
-      color: theme.buttonColor,
+      color: theme.primary,
       backgroundColor: theme.secondary,
-      width: '40px',
-      height: '40px',
-      padding: '0.5rem',
-      fontSize: '1.05rem',
+      width: '32px',
+      height: '32px',
+      padding: '0.45rem',
+      fontSize: '0.95rem',
       borderRadius: '50%',
       cursor: 'pointer',
       transition: 'background-color 0.5s',

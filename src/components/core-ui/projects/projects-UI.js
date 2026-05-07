@@ -12,7 +12,11 @@ function ProjectsUI({ theme, classes }) {
             {projectsData.length > 0 && (
                 <div className="projects" id="projects" style={{ backgroundColor: theme.secondary }}>
                     <div className="projects--header">
-                        <h1 style={{ color: theme.primary }}>Projects</h1>
+                        <p style={{ color: theme.primary }}>Portfolio Work</p>
+                        <h1 style={{ color: theme.tertiary }}>Selected Projects</h1>
+                        <span style={{ color: theme.tertiary }}>
+                            A mix of production-ready fullstack and frontend projects.
+                        </span>
                     </div>
                     <div className="projects--body">
                         <div className="projects--bodyContainer">

@@ -36,7 +36,7 @@ const Certificate = () => {
 	};
 
 	return (
-		<Container sx={{ py: 5 }} id="certificates">
+		<Container sx={{ py: 6 }} id="certificates">
 			<div className="certificate-header">
 				<h1
 					style={{
@@ -48,13 +48,23 @@ const Certificate = () => {
 			</div>
 			<Slider {...settings}>
 				{certificateData.map((item) => (
-					<Card key={item.id} sx={{ height: { xs: 320, sm: 480 } }}>
+					<Card
+						key={item.id}
+						sx={{
+							height: { xs: 320, sm: 460 },
+							backgroundColor: theme.quaternary,
+							border: "1px solid",
+							borderColor: theme.buttonColor,
+							borderRadius: "16px",
+						}}
+					>
 						<CardActionArea>
 							<CardMedia
 								component="img"
 								sx={{
-									height: { xs: 270, sm: 420 },
-									borderBottom: "1px solid #f5f5f5",
+									height: { xs: 250, sm: 390 },
+									borderBottom: "1px solid",
+									borderColor: theme.buttonColor,
 								}}
 								image={item.image}
 								alt={item.title}
@@ -64,11 +74,12 @@ const Certificate = () => {
 									display: "flex",
 									justifyContent: "space-between",
 									alignItems: "center",
+									color: theme.tertiary,
 								}}
 							>
-								<Typography>{item.title}</Typography>
-								<IconButton>
-									<Link href={item.link} target="_blank">
+								<Typography sx={{ fontFamily: "var(--primaryFont)", fontSize: "0.95rem" }}>{item.title}</Typography>
+								<IconButton sx={{ color: theme.primary }}>
+									<Link href={item.link} target="_blank" sx={{ color: "inherit" }}>
 										<HiExternalLink />
 									</Link>
 								</IconButton>

@@ -19,9 +19,126 @@ const ContactUI = ({ open, success, errMsg, handleClose, classes, handleContactF
       style={{ backgroundColor: theme.secondary }}
     >
       <div className='contacts--container'>
-        <h1 style={{ color: theme.primary }}>Contacts</h1>
+        <div className='contact-header'>
+          <p style={{ color: theme.primary }}>Let us connect</p>
+          <h1 style={{ color: theme.tertiary }}>Build something impactful together</h1>
+        </div>
         <div className='contacts-body'>
-          <div className='contacts-form'>
+          <div className='contacts-details' style={{ backgroundColor: theme.quaternary }}>
+            <h3 style={{ color: theme.tertiary }}>Reach out directly</h3>
+            <p style={{ color: theme.tertiary }}>
+              Open to product engineering roles, freelance work, and collaboration on modern web platforms.
+            </p>
+            <div className='personal-details-wrap'>
+              <a
+                href={`mailto:${contactsData.email}`}
+                className='personal-details'
+              >
+                <div className={classes.detailsIcon}>
+                  <FiAtSign />
+                </div>
+                <p style={{ color: theme.tertiary }}>
+                  {contactsData.email}
+                </p>
+              </a>
+              <a
+                href={`tel:${contactsData.phone}`}
+                className='personal-details'
+              >
+                <div className={classes.detailsIcon}>
+                  <FiPhone />
+                </div>
+                <p style={{ color: theme.tertiary }}>
+                  {contactsData.phone}
+                </p>
+              </a>
+              <div className='personal-details'>
+                <div className={classes.detailsIcon}>
+                  <HiOutlineLocationMarker />
+                </div>
+                <p style={{ color: theme.tertiary }}>
+                  {contactsData.address}
+                </p>
+              </div>
+            </div>
+            <div className='socialmedia-icons'>
+              {contactsData.twitter && (
+                <a
+                  href={contactsData.twitter}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={classes.socialIcon}
+                >
+                  <FaTwitter aria-label='Twitter' />
+                </a>
+              )}
+              {contactsData.github && (
+                <a
+                  href={contactsData.github}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={classes.socialIcon}
+                >
+                  <FaGithub aria-label='GitHub' />
+                </a>
+              )}
+              {contactsData.linkedIn && (
+                <a
+                  href={contactsData.linkedIn}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={classes.socialIcon}
+                >
+                  <FaLinkedinIn aria-label='LinkedIn' />
+                </a>
+              )}
+
+              {contactsData.medium && (
+                <a
+                  href={contactsData.medium}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={classes.socialIcon}
+                >
+                  <FaMediumM aria-label='Medium' />
+                </a>
+              )}
+
+              {contactsData.youtube && (
+                <a
+                  href={contactsData.youtube}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={classes.socialIcon}
+                >
+                  <FaYoutube aria-label='YouTube' />
+                </a>
+              )}
+
+              {contactsData.stackOverflow && (
+                <a
+                  href={contactsData.stackOverflow}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={classes.socialIcon}
+                >
+                  <FaStackOverflow aria-label='Stack Overflow' />
+                </a>
+              )}
+              {contactsData.facebook && (
+                <a
+                  href={contactsData.facebook}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={classes.socialIcon}
+                >
+                  <FaFacebook aria-label='facebook' />
+                </a>
+              )}
+            </div>
+          </div>
+          <div className='contacts-form' style={{ backgroundColor: theme.quaternary }}>
+            <h3 style={{ color: theme.tertiary }}>Send a message</h3>
             <form ref={form} onSubmit={handleContactForm}>
               <div className='input-container'>
                 <label htmlFor='Name' className={classes.label}>
@@ -131,122 +248,8 @@ const ContactUI = ({ open, success, errMsg, handleClose, classes, handleContactF
               />
             </Snackbar>
           </div>
-
-          <div className='contacts-details'>
-            <a
-              href={`mailto:${contactsData.email}`}
-              className='personal-details'
-            >
-              <div className={classes.detailsIcon}>
-                <FiAtSign />
-              </div>
-              <p style={{ color: theme.tertiary }}>
-                {contactsData.email}
-              </p>
-            </a>
-            <a
-              href={`tel:${contactsData.phone}`}
-              className='personal-details'
-            >
-              <div className={classes.detailsIcon}>
-                <FiPhone />
-              </div>
-              <p style={{ color: theme.tertiary }}>
-                {contactsData.phone}
-              </p>
-            </a>
-            <div className='personal-details'>
-              <div className={classes.detailsIcon}>
-                <HiOutlineLocationMarker />
-              </div>
-              <p style={{ color: theme.tertiary }}>
-                {contactsData.address}
-              </p>
-            </div>
-
-            <div className='socialmedia-icons'>
-              {contactsData.twitter && (
-                <a
-                  href={contactsData.twitter}
-                  target='_blank'
-                  rel='noreferrer'
-                  className={classes.socialIcon}
-                >
-                  <FaTwitter aria-label='Twitter' />
-                </a>
-              )}
-              {contactsData.github && (
-                <a
-                  href={contactsData.github}
-                  target='_blank'
-                  rel='noreferrer'
-                  className={classes.socialIcon}
-                >
-                  <FaGithub aria-label='GitHub' />
-                </a>
-              )}
-              {contactsData.linkedIn && (
-                <a
-                  href={contactsData.linkedIn}
-                  target='_blank'
-                  rel='noreferrer'
-                  className={classes.socialIcon}
-                >
-                  <FaLinkedinIn aria-label='LinkedIn' />
-                </a>
-              )}
-
-              {contactsData.medium && (
-                <a
-                  href={contactsData.medium}
-                  target='_blank'
-                  rel='noreferrer'
-                  className={classes.socialIcon}
-                >
-                  <FaMediumM aria-label='Medium' />
-                </a>
-              )}
-
-              {contactsData.youtube && (
-                <a
-                  href={contactsData.youtube}
-                  target='_blank'
-                  rel='noreferrer'
-                  className={classes.socialIcon}
-                >
-                  <FaYoutube aria-label='YouTube' />
-                </a>
-              )}
-
-              {contactsData.stackOverflow && (
-                <a
-                  href={contactsData.stackOverflow}
-                  target='_blank'
-                  rel='noreferrer'
-                  className={classes.socialIcon}
-                >
-                  <FaStackOverflow aria-label='Stack Overflow' />
-                </a>
-              )}
-              {contactsData.facebook && (
-                <a
-                  href={contactsData.facebook}
-                  target='_blank'
-                  rel='noreferrer'
-                  className={classes.socialIcon}
-                >
-                  <FaFacebook aria-label='facebook' />
-                </a>
-              )}
-            </div>
-          </div>
         </div>
       </div>
-      <img
-        src={theme.contactsimg}
-        alt='contacts'
-        className='contacts--img'
-      />
     </div>
   );
 };

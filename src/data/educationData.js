@@ -1,7 +1,7 @@
 export const educationData = [
 	{
 		id: 1,
-		institution: "MIT Academy of Engineering,Alandi",
+		institution: "MIT Academy of Engineering,Pune",
 		course: "Bachelor Degree",
 		startYear: "2019",
 		endYear: "2023",

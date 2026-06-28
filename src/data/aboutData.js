@@ -3,5 +3,5 @@ export const aboutData = {
 	description1:
 		"My name is LALIT RAJPUT. I'm a software developer based in India.",
 	description2:
-		"I am a professional and passionate programmer in my daily life. A quick learner with a self-learning attitude. I love to learn and explore new technologies and am Passionate about Problem Solving. Love almost all the stacks of Software Engineering. My current stack includes Nodejs, Nestjs, React, NextJs, Redux, RTK Query, Bootstrap, Ant Design, Material UI, MongoDB, Mysql, etc.",
+		"I am a software engineer focused on building scalable systems and microservices. I have deep expertise in developing robust backend and frontend applications using Node.js, Express.js, and React.js, alongside SQL and NoSQL databases. Furthermore, I am passionate about the Agentic AI space, actively leveraging tools like LangChain, LangGraph, and Retrieval-Augmented Generation (RAG) to engineer intelligent agentic architectures and workflows.",
 };

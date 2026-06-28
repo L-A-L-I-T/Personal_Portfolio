@@ -53,7 +53,7 @@ function LandingUI({ theme, drawerOpen, classes }) {
 						</div>
 						<div className="metric-card" style={{ backgroundColor: theme.quaternary }}>
 							<strong style={{ color: theme.primary }}>Fullstack</strong>
-							<span style={{ color: theme.tertiary }}>Node.js • React</span>
+							<span style={{ color: theme.tertiary }}>Node.js • React • Agentic AI</span>
 						</div>
 					</div>
 				</div>

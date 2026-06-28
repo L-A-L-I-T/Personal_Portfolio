@@ -1,45 +1,50 @@
 .projects {
-  padding: 4rem 1.5rem 2rem;
+  padding: 6rem 2rem 4rem;
 }
 
 .projects--header {
   text-align: center;
+  margin-bottom: 3.5rem;
 }
 
 .projects--header p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.15em;
+  margin: 0;
 }
 
 .projects--header h1 {
-  margin-top: 0.45rem;
-  font-size: 2rem;
+  margin-top: 0.6rem;
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .projects--header span {
-  margin-top: 0.45rem;
+  margin: 0.8rem auto 0;
   display: block;
-  font-size: 0.92rem;
-  opacity: 0.85;
+  font-size: 1rem;
+  opacity: 0.8;
+  max-width: 600px;
+  line-height: 1.5;
 }
 
 .projects--body {
-  margin: 1.8rem auto 0;
+  margin: 0 auto;
   width: min(1150px, 100%);
 }
 
 .projects--bodyContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: stretch;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-content: center;
 }
 
 .projects--viewAll {
-  margin-top: 1.3rem;
+  margin-top: 3.5rem;
   display: flex;
   justify-content: center;
 }
@@ -58,4 +63,11 @@
   font-weight: 600;
   padding-left: 1.1rem;
   cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects--viewAll a button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }

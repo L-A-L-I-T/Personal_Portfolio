@@ -1,26 +1,38 @@
-export const skillsData = [
-	"HTML",
-    "CSS",
-	"Javascript",
-    "Typescript",
-	"React JS",
-    "Redux",
-	"Docker",
-	"Next JS",
-	"Node JS",
-    "Express JS",
-	"MongoDB",
-	"MySQL",
-    "Redis",
-    "AWS",
-    "Kafka",
-    "Git",
-    "C++",
-    "Artificial Intelligence",
-    "Design Patterns",
-    "Data Structures and Algorithms",
-    "System Design"
-];
+export const skillsData = {
+    "Languages": [
+        "Javascript",
+        "Typescript",
+        "Python",
+        "C++",
+        "HTML",
+        "CSS"
+    ],
+    "Frameworks & Libraries": [
+        "React JS",
+        "Redux",
+        "Next JS",
+        "Node JS",
+        "Express JS"
+    ],
+    "Cloud & Infrastructure": [
+        "AWS",
+        "Docker",
+        "Redis",
+        "MongoDB",
+        "MySQL",
+        "Kafka",
+        "Git"
+    ],
+    "AI & Core CS": [
+        "System Design",
+        "Data Structures and Algorithms",
+        "Langchain",
+        "LangGraph",
+        "LangSmith",
+        "Retrieval Augmented Generation (RAG)",
+        "Agentic AI"
+    ]
+};
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
 // Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new

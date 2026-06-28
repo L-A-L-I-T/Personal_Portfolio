@@ -13,21 +13,47 @@ function Skills() {
                 <p style={{ color: theme.primary }}>Core Skills</p>
                 <h2 style={{ color: theme.tertiary }}>Tech stack I use to build products</h2>
             </div>
-            <div className="skillsContainer">
-                {skillsData.map((skill, id) => {
-                    const SkillIcon = getSkillIcon(skill);
-                    return (
-                        <div className="skill--box" key={id} style={{ backgroundColor: theme.quaternary }}>
-                            <SkillIcon className="skill-icon" style={{ color: theme.primary }} aria-label={skill} />
-                            <h3 style={{ color: theme.tertiary }}>
-                                {skill}
-                            </h3>
+            
+            <div className="skillsCategories">
+                {Object.entries(skillsData).map(([category, skills], catId) => (
+                    <div 
+                        key={catId} 
+                        className="skillsCategoryCard" 
+                        style={{ 
+                            backgroundColor: theme.quaternary,
+                            borderColor: theme.quaternaryLight + '20'
+                        }}
+                    >
+                        <h3 className="categoryTitle" style={{ color: theme.tertiary }}>
+                            <span className="titleLine" style={{ backgroundColor: theme.primary }} />
+                            {category}
+                        </h3>
+                        <div className="categorySkillsGrid">
+                            {skills.map((skill, id) => {
+                                const SkillIcon = getSkillIcon(skill);
+                                return (
+                                    <div key={id} className="skillPill">
+                                        <div 
+                                            className="skillPillIcon" 
+                                            style={{ 
+                                                color: theme.primary,
+                                                backgroundColor: theme.primary + '12' 
+                                            }}
+                                        >
+                                            <SkillIcon size={18} aria-label={skill} />
+                                        </div>
+                                        <span className="skillPillText" style={{ color: theme.tertiary }}>
+                                            {skill}
+                                        </span>
+                                    </div>
+                                );
+                            })}
                         </div>
-                    );
-                })}
+                    </div>
+                ))}
             </div>
         </div>
     )
 }
 
-export default Skills
+export default Skills;

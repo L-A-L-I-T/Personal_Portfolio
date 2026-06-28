@@ -8,6 +8,10 @@ import {
   FaNodeJs,
   FaProjectDiagram,
   FaSitemap,
+  FaRobot,
+  FaLink,
+  FaDatabase,
+  FaTools,
 } from "react-icons/fa";
 import {
   SiApachekafka,
@@ -22,19 +26,23 @@ import {
   SiReact,
   SiRedis,
   SiTypescript,
+  SiPython,
+  SiRedux,
+  SiExpress,
 } from "react-icons/si";
 
 const normalizeSkill = (skill = "") =>
   skill
     .toLowerCase()
     .replace(/\+\+/g, "plusplus")
-    .replace(/[\s._-]/g, "");
+    .replace(/[^a-z0-9]/g, "");
 
 const skillIconMap = {
   html: SiHtml5,
   css: SiCss3,
   javascript: SiJavascript,
   react: SiReact,
+  reactjs: SiReact,
   docker: FaDocker,
   nextjs: SiNextdotjs,
   nodejs: FaNodeJs,
@@ -47,6 +55,14 @@ const skillIconMap = {
   aws: FaAws,
   kafka: SiApachekafka,
   git: FaGitAlt,
+  python: SiPython,
+  redux: SiRedux,
+  expressjs: SiExpress,
+  langchain: FaLink,
+  langgraph: FaProjectDiagram,
+  langsmith: FaTools,
+  retrievalaugmentedgenerationrag: FaDatabase,
+  agenticai: FaRobot,
   artificialintelligence: FaBrain,
   designpatterns: FaProjectDiagram,
   datastructuresandalgorithms: FaSitemap,

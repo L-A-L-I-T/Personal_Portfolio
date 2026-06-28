@@ -1,32 +1,41 @@
 .about {
-  padding: 4rem 0 2rem;
+  padding: 6rem 0 4rem;
 }
 
 .section-label {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.15em;
   font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 .about-body {
-  margin-top: 0.8rem;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 0.9rem;
+  gap: 1.5rem;
 }
 
-.about-lead,
-.about-focus,
-.about-highlights,
-.about-animation {
-  border: 1px solid rgba(149, 163, 190, 0.2);
-  border-radius: 16px;
-  padding: 1.2rem;
+.about-card {
+  border: 1px solid;
+  border-radius: 24px;
+  padding: 2.2rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.04);
+  border-color: rgba(96, 165, 250, 0.4) !important;
 }
 
 .about-lead {
   grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-focus {
@@ -35,6 +44,10 @@
 
 .about-animation {
   grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-highlights {
@@ -42,132 +55,142 @@
 }
 
 .about-lead h2 {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
 }
 
-.about-lead p {
-  font-size: 0.96rem;
-  opacity: 0.92;
-  line-height: 1.7;
+.about-bio p {
+  font-size: 0.98rem;
+  opacity: 0.85;
+  line-height: 1.75;
+  margin: 0;
 }
 
-.about-lead p + p {
-  margin-top: 0.75rem;
-}
-
-.about-facts {
+.about-bio p + p {
   margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.6rem;
-}
-
-.fact-card {
-  border: 1px solid rgba(149, 163, 190, 0.2);
-  border-radius: 12px;
-  padding: 0.7rem;
-}
-
-.fact-card span {
-  display: block;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  font-weight: 700;
-}
-
-.fact-card strong {
-  display: block;
-  margin-top: 0.35rem;
-  font-size: 0.88rem;
-  line-height: 1.35;
 }
 
 .about-focus h3,
 .about-highlights h3 {
-  font-size: 1.06rem;
-  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 .focus-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
+  flex-direction: column;
+  gap: 0.85rem;
 }
 
 .focus-chip {
-  border: 1px solid rgba(149, 163, 190, 0.2);
-  border-radius: 999px;
-  padding: 0.44rem 0.7rem;
-  font-size: 0.84rem;
-  display: inline-flex;
+  border: 1px solid rgba(149, 163, 190, 0.15);
+  border-radius: 16px;
+  padding: 0.8rem 1rem;
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.9rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.focus-chip span {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
+.focus-chip:hover {
+  transform: translateX(6px);
+  border-color: rgba(96, 165, 250, 0.3);
 }
 
-.about-note {
-  margin-top: 0.9rem;
+.chip-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  flex-shrink: 0;
 }
 
-.about-note p {
-  font-size: 0.9rem;
-  line-height: 1.65;
-  opacity: 0.9;
+.chip-text {
+  font-size: 0.92rem;
+  font-weight: 600;
+  font-family: var(--primaryFont);
 }
 
 .animation-wrap {
-  max-width: 360px;
-  margin: 0 auto;
+  max-width: 280px;
+  width: 100%;
 }
 
 .animation-caption {
-  margin-top: 0.25rem;
+  margin-top: 1.5rem;
   text-align: center;
 }
 
 .animation-caption span {
   font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   font-weight: 700;
 }
 
 .animation-caption p {
-  margin-top: 0.45rem;
+  margin-top: 0.5rem;
   font-size: 0.88rem;
   line-height: 1.6;
-  opacity: 0.9;
+  opacity: 0.8;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.highlight-item {
+.principles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.principle-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.55rem;
-  margin-bottom: 0.65rem;
+  gap: 1rem;
 }
 
-.highlight-item span {
-  width: 8px;
-  height: 8px;
+.principle-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 800;
   flex-shrink: 0;
+  font-family: var(--primaryFont);
 }
 
-.highlight-item p {
-  font-size: 0.9rem;
+.principle-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.principle-content h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.principle-content p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.8;
 }
 
 @media (max-width: 960px) {
   .about-body {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 
   .about-lead,
@@ -175,9 +198,5 @@
   .about-animation,
   .about-highlights {
     grid-column: auto;
-  }
-
-  .about-facts {
-    grid-template-columns: 1fr;
   }
 }
